@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;1,100&family=Poppins:wght@200&family=Roboto+Flex:opsz@8..144&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/ef993298c0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="home_page.css">
+</head>
+<body>
+    <div class="home-page">
+    <!-- Thanh Service bar -->
+    <div class="service-bar">
+        <div class="service-bar-1">
+            <ul>
+                <li><i class="fa-solid fa-envelope"></i>nganhoa.ielts@gmail.com</li>
+                <li><i class="fa-solid fa-phone"></i>0989 467 850</li>
+            </ul>
+        </div>
+        <div class="service-bar-2">
+            <ul>
+                <li><i class="fa-brands fa-twitter"></i></li>
+                <li><i class="fa-brands fa-youtube"></i></li>
+                <li><i class="fa-brands fa-facebook"></i></li>
+                <li><i class="fa-brands fa-instagram"></i></li>
+            </ul>    
+        </div>
+    </div>
+    <!-- Thanh Menu -->
+    <div class="nav-bar">
+        <div class="logo">
+            <img src="image/logo.png.png" alt="">
+        </div>
+        <nav>
+            <ul>
+                <li class="intro">
+                    <a href="">GIỚI THIỆU</a>
+                    <ul class="sub-menu">
+                        <li>Giới thiệu về cô Ngân Hoa</li>
+                        <li>Lộ trình học</li>
+                        <li>Danh sách lớp khai giảng</li>
+                        <li>Review của học viên</li>
+                        <li>Liên hệ</li>
+                    </ul>
+                </li>
+                <li class="intro"><a href="">ĐĂNG KÍ KHOÁ HỌC</a></li>
+                <li class="intro"><a href="">ĐĂNG KÍ THI THỬ</a></li>
+            </ul>
+        </nav>
+        <button><a href="">Đăng nhập</a></button>
+    </div>
+<!-- HOME-PAGE-CONTENT-1 -->
+<div class="home-page-content-1">
+    <!-- GALLERY SLIDERS DAU TRANG -->
+    <div class="gallery-wrap">
+        <div class="gallery">
+            <span><img src="image/slider1.png"></span>
+            <span><img src="image/slider3.png"></span>
+            <span><img src="image/slider4.png"></span>
+        </div>
+        <img src="image/nextBTN.png" id="nextBtn">
+    </div>
+    <script>
+        let scrollContainer = document.querySelector(".gallery");
+        let nextBtn = document.getElementById("nextBtn");
+
+        scrollContainer.addEventListener("wheel", (evt) => {
+            evt.preventDefault();
+            scrollContainer.scrollLeft += evt.deltaY;
+            scrollContainer.style.scrollBehavior = "auto";
+        });
+
+        nextBtn.addEventListener("click", ()=>{
+            scrollContainer.style.scrollBehavior = "smooth";
+            scrollContainer.scrollLeft += 900;
+        });
+    </script>
+    <!-- REVIEW HOC VIEN -->
+    <div class="rv-hv">
+        <h1>REVIEW CỦA HỌC VIÊN</h1>
+        <div class="card-review">
+            <img src="image/img-review.png" alt="">
+            <h2>Nguyễn Thu Hà - Học sinh lớp IELTS STARTER 0221</h2>
+            <p>Sau khi học với cô Ngân Hoa, em đã học được rất nhiều kiến thức không chỉ kiến thức ngữ pháp mà còn cách triển khai ý tưởng trong Writing.</p>
+            <div><a href="">Xem thêm >>></a></div>
+        </div>
+    </div>
+</div>
+    </div>
+<!-- CÁC KHOÁ HỌC CỦA CHÚNG TÔI -->
+<div class="card-courses">
+    <h1>CÁC KHOÁ HỌC CỦA CHÚNG TÔI</h1>
+    <div class="card-course">
+        <img src="image/backBTN.png" id="nextBtn">
+        <div class="card-course-1">
+            <img src="image/card-khoá-học.png" alt="">
+            <h2>Foundation 1</h2>
+            <h3>Ngữ âm, từ vựng và ngữ pháp cơ bản</h3>
+            <p>Khoá học gồm 35 buổi phù hợp với các bạn học sinh mất gốc tiếng Anh hoặc muốn củng cố nền tảng tiếng Anh vững chắc</p>
+            <!-- BACKEND: SỐ LƯỢNG HỌC (đánh giá) VÀ HỌC PHÍ -->
+            <div class="course-finance">
+                <img src="image/Học phí_ 4.000.000 VND.png" alt="">
+            </div>
+            <button><a href="">Đăng kí ngay</a></button>
+        </div>
+        <div class="card-course-1">
+            <img src="image/card-khoá-học.png" alt="">
+            <h2>Foundation 2</h2>
+            <h3>Từ vựng, ngữ pháp cơ bản và nâng cao</h3>
+            <p>
+                Khoá học gồm 30 buổi phù hợp với các bạn học sinh đã có nền tiếng Anh, muốn củng cố nền tảng Tiếng Anh.</p>
+            <!-- BACKEND: SỐ LƯỢNG HỌC (đánh giá) VÀ HỌC PHÍ -->
+            <div class="course-finance">
+                <img src="image/Học phí_ 4.000.000 VND.png" alt="">
+            </div>
+            <button><a href="">Đăng kí ngay</a></button>
+        </div>
+        <div class="card-course-1">
+            <img src="image/card-khoá-học.png" alt="">
+            <h2>IELTS Starter</h2>
+            <h3>Từ vựng và ngữ pháp cơ bản IELTS</h3>
+            <p>
+                Khoá học gồm 35 buổi và 16 buổi với giáo viên nước ngoài, phù hợp với các bạn muốn đạt đầu ra là 5.0 IELTS.</p>
+            <!-- BACKEND: SỐ LƯỢNG HỌC (đánh giá) VÀ HỌC PHÍ -->
+            <div class="course-finance">
+                <img src="image/Học phí_ 6.000.000 VND.png" alt="">
+            </div>
+            <button><a href="">Đăng kí ngay</a></button>
+        </div>
+        <img src="image/nextBTN.png" id="backBtn">
+    </div>
+</div>
+<!-- LỘ TRÌNH HỌC -->
+<div class="learning-path">
+    <h1>LỘ TRÌNH HỌC</h1>
+    <img src="image/lộ trình học.png" alt="">
+</div>
+<!-- LỊCH KHAI GIẢNG -->
+<div class="opening-course">
+    <h1>LỊCH KHAI GIẢNG</h1>
+    <div class="card-opening-course">
+        <img src="image/backBTN.png" alt="">
+        <div class="card-opening-course-1">
+            <h2>FD1 0223</h2>
+            <h3>Lịch học: </h3>
+                <p>18h - 19h30 Thứ 2 và Thứ 4</p>
+            <h3>Ngày khai giảng: </h3>
+                <p>20/10/2023</p>
+        </div>
+        <div class="card-opening-course-1">
+            <h2>FD2 0223</h2>
+            <h3>Lịch học: </h3>
+                <p>18h - 19h30 Thứ 2 và Thứ 6</p>
+            <h3>Ngày khai giảng: </h3>
+                <p>20/10/2023</p>
+        </div>
+        <div class="card-opening-course-1">
+            <h2>Starter 0223</h2>
+            <h3>Lịch học: </h3>
+                <p>20h - 21h30 Thứ 2 và Chủ Nhật</p>
+            <h3>Ngày khai giảng: </h3>
+                <p>20/10/2023</p>
+        </div>
+        <img src="image/nextBTN.png" alt="">
+    </div>
+</div>
+<!-- ĐĂNG KÍ THI THỬ -->
+<div class="pre-test">
+    <img src="image/pre-test-img.png" alt="">
+
+    <div class="pre-test-box">
+        <h1>ĐĂNG KÍ THI THỬ</h1>
+        <div class="pre-test-details">
+            <form action="">
+
+                <table>
+                    <tr>
+                        <th>Họ và tên</th>
+                        <td>
+                            <input type="text" id="pre-tester-name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Email</th>
+                        <td>
+                            <input type="email" id="pre-tester-email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Số điện thoại</th>
+                        <td>
+                            <input type="text" id="pre-tester-phone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th> Loại bài thi </th>
+                        <td>
+                            <input type="radio" value="BASIC" id="basic"> <label for="basic">Cơ bản</label> 
+                            <input type="radio" value="IELTS" id="ielts"> <label for="ielts">IELTS</label> 
+                        </td>
+                    </tr>
+                </table>
+                <button><a href="">Thi thử ngay</a></button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
